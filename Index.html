@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zufallsaufgabe 🎲 | Party Edition</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      background: linear-gradient(135deg, #ff0099, #ffcc00, #00ccff);
+      background-size: 300% 300%;
+      animation: gradient 8s ease infinite;
+      color: #fff;
+      margin: 0;
+      padding: 60px 20px;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 2.4em;
+      text-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    }
+
+    .card {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 40px;
+      margin-top: 40px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      max-width: 500px;
+      backdrop-filter: blur(8px);
+    }
+
+    .aufgabe {
+      font-size: 1.6em;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+
+    button {
+      background: #fff;
+      color: #333;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 12px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background: #333;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Zufallsaufgabe – Party Edition 🎲</h1>
+
+  <div class="card">
+    <div id="aufgabe" class="aufgabe">Klicke auf den Button für deine Aufgabe!</div>
+    <button onclick="neueAufgabe()">🔄 Neue Aufgabe</button>
+  </div>
+
+  <footer>🍺 Viel Spaß beim Spielen! | Made with ❤️ for Party People</footer>
+
+  <script>
+    const aufgaben = [
+      "1. Wahrheit oder Pflicht",
+      "2. Tausche dein Getränk mit jemand anderem",
+      "3. Tanze 10 Sekunden, als wärst du auf einem 90er-Techno-Rave.",
+      "4. Mach 5 Liegestütze oder trink einen kurzen",
+      "5. Mach ein Kompliment an die Person gegenüber.",
+      "6. Sprich nur mit Reimen bis du wieder dran bist. Jeder Fehler einen kurzen",
+      "7. Jemand anderes wirft für dich",
+      "8. Imitiere einen Mitspieler, bis jemand errät, wer es ist.",
+      "9. Erfinde eine Regel, die bis zum Ende der Runde gilt.",
+      "10. Flirte übertrieben mit dem nächsten Spieler, der trinkt.",
+      "11. Sprich nur in Fragen für eine komplette Runde.",
+      "12. Mach eine kleine Challenge – z. B. 10 Sekunden Plank oder Gleichgewichtstest.",
+      "13. Trinke einen kurzen",
+      "14. Alle trinken einen kurzen",
+      "15. Das gegnerteam trinkt einen kurzen",
+      "16. Mache einen super schlechten Anmachspruch",
+      "17. Rede die nächsten 5 Minuten in der dritten Person. („Lisa findet das gar nicht lustig…“)",
+      "18. Tu so, als wärst du der Barkeeper und halte eine übertrieben professionelle Rede über Bier.",
+      "19. Wähle zwei Spieler, die 10 Sekunden lang eine Filmszene nachspielen müssen.",
+      "20. Mach eine Yoga-Pose, während du trinkst.",
+      "21. Mach ein Kompliment, das sich wie ein Diss anhört.",
+      "22. Erfinde ein kurzes Gedicht über Bier oder Freundschaft.",
+      "23. Sprich 1 Minute lang in übertriebener Zeitlupe.",
+      "24. Sag ein Zitat – wer errät, woher es kommt, darf jemand anderen trinken lassen. (Musik, Film)",
+      "25. Man darf nur noch mit links trinken",
+      "26. Mach eine kurze Ansprache, als wärst du Bundeskanzler/in beim „Tag des Bieres“.",
+      "27. Tu so, als wärst du betrunken, auch wenn du’s (noch) nicht bist. (Für eine Runde)",
+      "28. Wähle einen „Bodyguard“, der jedes Mal mit dir trinkt, wenn du musst.",
+      "29. Mach ein Geräusch, das du als Kind oft gemacht hast.",
+      "30. Versuch, ein Glas oder Flasche auf dem Kopf zu balancieren.",
+      "31. Erfinde einen Songtitel, der deine Stimmung beschreibt.",
+      "32. Erzähl einen unnötigen Fun Fact, egal ob wahr oder ausgedacht.",
+      "33. Mach eine dramatische Zeitlupen-Umarmung mit jemandem.",
+      "34. Tue so, als wärst du ein Nachrichtenmoderator, der vom „Bierpong-Finale“ berichtet."
+    ];
+
+    function neueAufgabe() {
+      const randomIndex = Math.floor(Math.random() * aufgaben.length);
+      document.getElementById("aufgabe").innerText = aufgaben[randomIndex];
+    }
+  </script>
+</body>
+</html>
